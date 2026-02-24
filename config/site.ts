@@ -1,0 +1,32 @@
+export const siteConfig = {
+  name: "Octavio Calleya García - Software Engineer | Java & Kotlin Backend Specialist",
+  authorName: "Octavio Calleya García",
+  username: "octaviospain",
+  description:
+    "Octavio Calleya García - Software Engineer creating tools and powering backend distributed systems of the modern web and beyond.",
+  url: "https://transgressoft.net",
+  links: {
+    twitter: "https://x.com/nomadpolitik",
+    github: "https://github.com/octaviospain",
+  },
+  ogImage: "/logo.png",
+  iconIco: "/favicon.ico",
+  logoIcon: "/logo.png",
+  keywords: [
+    "Octavio Calleya García",
+    "Octavio Calleya",
+    "Backend Developer",
+    "Java Specialist",
+    "Java Backend Specialist",
+    "Kotlin Backend Specialist",
+    "Software Engineer",
+    "Full Stack Developer",
+    "React Developer",
+    "TypeScript",
+    "Software Development",
+    "Web Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "Tech Portfolio",
+  ],
+};
