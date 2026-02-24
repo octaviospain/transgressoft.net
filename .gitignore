@@ -26,6 +26,7 @@ yarn-error.log*
 
 # env
 .env
+.env.deploy
 .env*.local
 
 # vercel
@@ -39,6 +40,9 @@ next-env.d.ts
 .idea/
 *.iml
 *.iws
+
+# Deployment
+deploy.sh
 
 # Agentic coding tools
 .serena
