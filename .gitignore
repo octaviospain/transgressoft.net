@@ -47,3 +47,5 @@ deploy.sh
 # Agentic coding tools
 .serena
 .claude
+.planning
+CLAUDE.md

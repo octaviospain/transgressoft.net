@@ -51,14 +51,14 @@ export const Projects: ProjectInterface[] = [
     descriptionDetails: {
       paragraphs: [
         "Musicott is a Java 8 desktop application for managing music libraries, built with JavaFX and CSS for a rich user interface experience.",
-        "The project features unit testing with JUnit 5 and UI testing with TestFX, a REST web client with JAX-RS, and dependency injection with Google Guice and Spring Boot. Currently under redesign using music-commons and transgressoft-commons libraries as part of a modular architectural split.",
+        "The project features unit testing with JUnit 5 and UI testing with TestFX, a REST web client with JAX-RS, and dependency injection with Google Guice and Spring Boot. Currently under redesign using music-commons and lirp libraries as part of a modular architectural split.",
       ],
       bullets: [
         "Built a desktop music manager application using Java 8 and JavaFX with CSS styling.",
         "Implemented unit testing with JUnit 5 and UI testing with TestFX for comprehensive test coverage.",
         "Developed REST web client integration using JAX-RS.",
         "Used dependency injection with Google Guice and Spring Boot for clean architecture.",
-        "Currently redesigning with music-commons and transgressoft-commons for modular architecture.",
+        "Currently redesigning with music-commons and lirp for modular architecture.",
       ],
     },
   },
@@ -70,7 +70,7 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "A modular, reactive Kotlin library for managing audio libraries, playlists, and waveform visualizations.",
     githubLink: "https://github.com/octaviospain/music-commons",
-    techStack: ["Kotlin", "Concurrent Programming", "Software Testing"],
+    techStack: ["Kotlin", "Concurrent Programming", "Software Testing", "Kotlin Coroutines", "Kotlin Serialization"],
     startDate: new Date("2020-01-01"),
     endDate: new Date("2025-12-01"),
     companyLogoImg: "/projects/music-commons/logo.png",
@@ -96,34 +96,27 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
-    id: "transgressoft-commons",
-    companyName: "transgressoft-commons",
+    id: "lirp",
+    companyName: "lirp",
     type: "Personal",
     category: ["Library", "Backend"],
     shortDescription:
       "A reactive programming library in Kotlin using Publisher-Subscriber pattern, Coroutines, and Domain Driven Design.",
-    githubLink: "https://github.com/octaviospain/transgressoft-commons",
+    githubLink: "https://github.com/octaviospain/lirp",
     techStack: [
       "Kotlin",
-      "Concurrent Programming",
-      "Domain Driven Design",
-      "Software Architecture",
+      "Kotlin Coroutines",
+      "Kotlin Serialization",
+      "Kotest"
     ],
     startDate: new Date("2020-01-01"),
     endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/transgressoft-commons/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Reactive Framework",
-        description:
-          "Lightweight Kotlin framework for building reactive, persistent applications with DDD principles.",
-        imgArr: ["/projects/transgressoft-commons/logo.png"],
-      },
-    ],
+    companyLogoImg: "/projects/lirp/logo.png",
+    pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [
-        "transgressoft-commons is a reactive programming library in Kotlin using the Publisher-Subscriber pattern.",
-        "It builds upon Kotlin Coroutines and Kotlin Serialization to provide a ready-to-use solution for building reactive, persistent applications in a clean, decoupled, and object-oriented approach loyal to Domain Driven Design (DDD).",
+        "A reactive library for Kotlin & Java projects that implements the Publisher-Subscriber pattern, enabling more maintainable and decoupled systems through reactive programming principles.",
+        "In many codebases, domain objects end up as anemic structures shuffled between services that externally query and mutate them. lirp takes the opposite approach. Inspired by DDD's concept of rich domain models, entities in lirp own their reactivity. When a property changes, the entity itself publishes the event — no external event bus wiring, no service-layer glue. Subscribers observe the entity directly, preserving the Bounded Context boundary and keeping coupling low.",
       ],
       bullets: [
         "Built a lightweight reactive framework using Kotlin Coroutines and Publisher-Subscriber pattern.",

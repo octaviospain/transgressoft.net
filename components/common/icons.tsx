@@ -41,8 +41,8 @@ import {
   HiOutlineLink,
 } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
+import { FaAws, FaLinkedinIn } from "react-icons/fa6";
 import {
-  SiAmazonwebservices,
   SiApachemaven,
   SiApachekafka,
   SiCamunda,
@@ -53,7 +53,6 @@ import {
   SiHibernate,
   SiJavascript,
   SiKotlin,
-  SiLinkedin,
   SiMysql,
   SiNodedotjs,
   SiOpenjdk,
@@ -98,7 +97,7 @@ export const Icons = {
   link: HiOutlineLink,
   externalLink: HiOutlineExternalLink,
   star: AiFillStar,
-  amazonaws: SiAmazonwebservices,
+  amazonaws: FaAws,
   apachemaven: SiApachemaven,
   apachekafka: SiApachekafka,
   camunda: SiCamunda,
@@ -117,7 +116,7 @@ export const Icons = {
   typescript: SiTypescript,
   gmail: SiGmail,
   twitter: SiX,
-  linkedin: SiLinkedin,
+  linkedin: FaLinkedinIn,
   userFill: BiSolidUser,
   work: HiBriefcase,
   gitHub: ({ ...props }: LucideProps) => (
