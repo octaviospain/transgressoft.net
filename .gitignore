@@ -28,6 +28,9 @@ yarn-error.log*
 .env
 .env.deploy
 .env*.local
+sonar-project.properties
+.sonar_lock
+report-task.txt
 
 # vercel
 .vercel

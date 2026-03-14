@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
-      <div className="relative w-full h-[200px] flex-shrink-0">
+      <div className="relative w-full h-[200px] shrink-0">
         <Image
           className="rounded-lg border border-border object-cover"
           src={project.companyLogoImg}
@@ -22,11 +22,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           loading="eager"
         />
       </div>
-      <div className="pt-5 space-y-3 flex flex-col flex-grow">
+      <div className="pt-5 space-y-3 flex flex-col grow">
         <h5 className="text-2xl font-bold tracking-tight text-foreground">
           {project.companyName}
         </h5>
-        <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
+        <p className="line-clamp-3 font-normal text-muted-foreground grow">
           {project.shortDescription}
         </p>
         <div className="flex gap-2 flex-wrap">

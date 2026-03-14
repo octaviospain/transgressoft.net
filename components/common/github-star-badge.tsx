@@ -44,7 +44,7 @@ export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
         stars != null ? ` (Musicott: ${stars.toLocaleString()} stars)` : ""
       }`}
       className={cn(
-        "inline-flex h-8 items-center gap-2 rounded-full border border-border bg-background/60 px-3 text-xs text-muted-foreground backdrop-blur transition-colors hover:bg-accent hover:text-foreground",
+        "inline-flex h-8 items-center gap-2 rounded-full border border-border bg-background/60 px-3 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-foreground",
         className
       )}
     >
