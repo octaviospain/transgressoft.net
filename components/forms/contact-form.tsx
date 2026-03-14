@@ -22,17 +22,15 @@ const formSchema = z.object({
   name: z.string().min(3, {
     message: "Name must contain at least 3 characters.",
   }),
-  email: z.string().email("Please enter a valid email."),
+  email: z.email("Please enter a valid email."),
   message: z.string().min(10, {
     message: "Please write something more descriptive.",
   }),
-  social: z.string().url().optional().or(z.literal("")),
+  social: z.url().optional().or(z.literal("")),
 });
 
 export function ContactForm() {
   const storeModal = useModalStore();
-
-  // const [open, setOpen] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -62,7 +60,7 @@ export function ContactForm() {
           title: "Thankyou!",
           description:
             "Your message has been received! I appreciate your contact and will get back to you shortly.",
-          icon: Icons.successAnimated,
+          icon: Icons.SuccessAnimated,
         });
       }
     } catch (err) {

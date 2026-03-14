@@ -9,7 +9,7 @@ import ChipContainer from "@/components/ui/chip-container";
 import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 
 interface ProjectPageProps {
@@ -20,7 +20,7 @@ interface ProjectPageProps {
 
 const githubUsername = "octaviospain";
 
-export default async function Project({ params }: ProjectPageProps) {
+export default async function Project({ params }: Readonly<ProjectPageProps>) {
   const { projectId } = await params;
   let project = Projects.find((val) => val.id === projectId);
   if (!project) {
@@ -36,7 +36,7 @@ export default async function Project({ params }: ProjectPageProps) {
           "absolute left-[-200px] top-14 hidden xl:inline-flex"
         )}
       >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
+        <Icons.ChevronLeft className="mr-2 h-4 w-4" />
         All Projects
       </Link>
       <div>
@@ -44,7 +44,7 @@ export default async function Project({ params }: ProjectPageProps) {
           dateTime={Date.now().toString()}
           className="block text-sm text-muted-foreground"
         >
-          {formatDateFromObj(project.startDate)}
+          {formatDate(project.startDate)}
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
@@ -52,14 +52,14 @@ export default async function Project({ params }: ProjectPageProps) {
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">
                 <Link href={project.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
+                  <Icons.GitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
                 </Link>
               </CustomTooltip>
             )}
             {project.websiteLink && (
               <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
                 <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
+                  <Icons.ExternalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
                 </Link>
               </CustomTooltip>
             )}
@@ -100,7 +100,6 @@ export default async function Project({ params }: ProjectPageProps) {
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Description
         </h2>
-        {/* {<project.descriptionComponent />} */}
         <ProjectDescription
           paragraphs={project.descriptionDetails.paragraphs}
           bullets={project.descriptionDetails.bullets}
@@ -122,7 +121,7 @@ export default async function Project({ params }: ProjectPageProps) {
           href="/projects"
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
+          <Icons.ChevronLeft className="mr-2 h-4 w-4" />
           All Projects
         </Link>
       </div>

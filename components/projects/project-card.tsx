@@ -10,7 +10,7 @@ interface ProjectCardProps {
   project: ProjectInterface;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
       <div className="relative w-full h-[200px] shrink-0">
@@ -35,15 +35,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Link href={`/projects/${project.id}`} className="mt-auto">
           <Button variant={"default"} className="mt-2 w-full sm:w-auto">
             Read more
-            <Icons.chevronRight className="w-4 ml-1" />
+            <Icons.ChevronRight className="w-4 ml-1" />
           </Button>
         </Link>
       </div>
       <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border hidden md:block">
         {project.type === "Personal" ? (
-          <Icons.userFill className="h-4 w-4" />
+          <Icons.UserFill className="h-4 w-4" />
         ) : (
-          <Icons.work className="h-4 w-4" />
+          <Icons.Work className="h-4 w-4" />
         )}
       </div>
     </div>

@@ -56,7 +56,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors shrink-0 mt-0.5 sm:mt-0"
                 >
-                  <Icons.externalLink className="w-4 h-4" />
+                  <Icons.ExternalLink className="w-4 h-4" />
                 </a>
               )}
             </div>
@@ -75,9 +75,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             {experience.description[0]}
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
-            {experience.skills.slice(0, 2).map((skill, index) => (
+            {experience.skills.slice(0, 2).map((skill) => (
               <span
-                key={index}
+                key={skill}
                 className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground"
               >
                 {skill}
@@ -100,7 +100,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         >
           <Link href={`/experience/${experience.id}`}>
             View Details
-            <Icons.chevronRight className="ml-2 h-4 w-4" />
+            <Icons.ChevronRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>

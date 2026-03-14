@@ -11,19 +11,19 @@ export const SocialLinks: SocialInterface[] = [
   {
     name: "Github",
     username: "@octaviospain",
-    icon: Icons.gitHub,
+    icon: Icons.GitHub,
     link: "https://github.com/octaviospain",
   },
   {
     name: "LinkedIn",
     username: "Octavio Calleya Garcia",
-    icon: Icons.linkedin,
+    icon: Icons.Linkedin,
     link: "https://www.linkedin.com/in/developerotto",
   },
   {
     name: "Mail",
     username: "octavio",
-    icon: Icons.gmail,
+    icon: Icons.Gmail,
     link: "mailto:octavio@transgressoft.net",
   },
 ];

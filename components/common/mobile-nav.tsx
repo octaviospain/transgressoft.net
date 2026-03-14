@@ -18,7 +18,7 @@ const tradeWinds = Trade_Winds({
   display: "swap",
 });
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, children }: Readonly<MobileNavProps>) {
   useLockBody();
 
   return (
@@ -34,9 +34,9 @@ export function MobileNav({ items, children }: MobileNavProps) {
           </span>
         </Link>
         <nav className="grid grid-flow-row auto-rows-max text-sm">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <Link
-              key={index}
+              key={item.href}
               href={item.disabled ? "#" : item.href}
               className={cn(
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",

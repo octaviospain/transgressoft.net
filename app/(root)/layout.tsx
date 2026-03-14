@@ -8,7 +8,7 @@ interface MarketingLayoutProps {
   children: React.ReactNode;
 }
 
-export default function MarketingLayout({ children }: MarketingLayoutProps) {
+export default function MarketingLayout({ children }: Readonly<MarketingLayoutProps>) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="container z-50 bg-background">

@@ -50,8 +50,8 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
-        <div className="container flex max-w-5xl flex-col items-center gap-4 text-center -mt-20">
+      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 min-h-[calc(100vh-5rem)] flex items-center">
+        <div className="container flex max-w-5xl flex-col items-center gap-4 text-center">
           <Image
             src={profileImg}
             height={100}
@@ -93,7 +93,7 @@ export default function IndexPage() {
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
               >
-                <Icons.post className="w-4 h-4 mr-2" /> Resume
+                <Icons.Post className="w-4 h-4 mr-2" /> Resume
               </Link>
             </AnimatedText>
             <AnimatedText delay={0.8}>
@@ -108,12 +108,12 @@ export default function IndexPage() {
                 )}
                 aria-label="Contact Octavio Calleya García"
               >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
+                <Icons.Contact className="w-4 h-4 mr-2" /> Contact
               </Link>
             </AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
-            <Icons.chevronDown className="h-6 w-6 mt-10" />
+            <Icons.ChevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/projects">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.ChevronDown className="mr-2 h-4 w-4" /> View All
             </Button>
           </Link>
         </AnimatedText>
@@ -193,7 +193,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/experience">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.ChevronDown className="mr-2 h-4 w-4" /> View All
             </Button>
           </Link>
         </AnimatedText>
@@ -222,7 +222,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.ChevronDown className="mr-2 h-4 w-4" /> View All
             </Button>
           </Link>
         </AnimatedText>

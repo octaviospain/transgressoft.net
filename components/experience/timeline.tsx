@@ -82,7 +82,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        <Icons.externalLink className="w-4 h-4" />
+                        <Icons.ExternalLink className="w-4 h-4" />
                       </a>
                     )}
                   </div>
@@ -102,7 +102,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
               >
                 <Link href={`/experience/${experience.id}`}>
                   View Details
-                  <Icons.chevronRight className="ml-2 h-4 w-4" />
+                  <Icons.ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>

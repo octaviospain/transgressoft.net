@@ -12,7 +12,7 @@ export default function PageContainer({
   title,
   description,
   children,
-}: PageContainerProps) {
+}: Readonly<PageContainerProps>) {
   return (
     <ClientPageWrapper>
       <div>

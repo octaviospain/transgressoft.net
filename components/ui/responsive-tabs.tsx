@@ -29,7 +29,7 @@ export function ResponsiveTabs({
   items,
   defaultValue,
   className,
-}: ResponsiveTabsProps) {
+}: Readonly<ResponsiveTabsProps>) {
   const [activeTab, setActiveTab] = React.useState(
     defaultValue || items[0]?.value
   );

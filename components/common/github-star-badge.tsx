@@ -11,7 +11,7 @@ type GitHubStarBadgeProps = {
   className?: string;
 };
 
-export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
+export function GitHubStarBadge({ className }: Readonly<GitHubStarBadgeProps>) {
   const [stars, setStars] = React.useState<number | null>(null);
 
   React.useEffect(() => {
@@ -41,7 +41,7 @@ export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
       target="_blank"
       rel="noreferrer"
       aria-label={`View GitHub profile${
-        stars != null ? ` (Musicott: ${stars.toLocaleString()} stars)` : ""
+        stars == null ? "" : ` (Musicott: ${stars.toLocaleString()} stars)`
       }`}
       className={cn(
         "inline-flex h-8 items-center gap-2 rounded-full border border-border bg-background/60 px-3 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-foreground",
@@ -49,13 +49,13 @@ export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
       )}
     >
       <span className="hidden items-center gap-2 sm:inline-flex">
-        <Icons.gitHub className="h-3.5 w-3.5" />
+        <Icons.GitHub className="h-3.5 w-3.5" />
         <span className="font-medium">GitHub</span>
         <span className="text-muted-foreground/60">&middot;</span>
       </span>
-      <Icons.star className="h-3.5 w-3.5" />
+      <Icons.Star className="h-3.5 w-3.5" />
       <span className="font-medium tabular-nums">
-        {stars != null ? stars.toLocaleString() : "Star"}
+        {stars == null ? "Star" : stars.toLocaleString()}
       </span>
     </Link>
   );

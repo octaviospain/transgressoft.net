@@ -58,7 +58,7 @@ export async function generateMetadata({
 
 export default async function ExperienceDetailPage({
   params,
-}: ExperienceDetailPageProps) {
+}: Readonly<ExperienceDetailPageProps>) {
   const { expId } = await params;
   const experience = experiences.find((c) => c.id === expId);
 
@@ -77,9 +77,9 @@ export default async function ExperienceDetailPage({
               Role Summary
             </h3>
             <ul className="space-y-3">
-              {experience.description.map((desc, idx) => (
+              {experience.description.map((desc) => (
                 <li
-                  key={idx}
+                  key={desc}
                   className="text-base leading-relaxed flex items-start gap-3"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -101,9 +101,9 @@ export default async function ExperienceDetailPage({
               Key Achievements
             </h3>
             <ul className="space-y-3">
-              {experience.achievements.map((achievement, idx) => (
+              {experience.achievements.map((achievement) => (
                 <li
-                  key={idx}
+                  key={achievement}
                   className="text-base leading-relaxed flex items-start gap-3"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -141,7 +141,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
+              <Icons.ChevronLeft className="mr-2 h-4 w-4" />
               Back to Experience
             </Link>
           </Button>
@@ -179,7 +179,7 @@ export default async function ExperienceDetailPage({
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-foreground transition-colors"
                           >
-                            <Icons.externalLink className="w-4 h-4" />
+                            <Icons.ExternalLink className="w-4 h-4" />
                           </a>
                         )}
                       </div>
@@ -209,7 +209,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.4} className="flex justify-center mt-8">
           <Button variant="outline" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
+              <Icons.ChevronLeft className="mr-2 h-4 w-4" />
               View All Experience
             </Link>
           </Button>

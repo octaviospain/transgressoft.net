@@ -3,7 +3,7 @@ interface PageHeaderProps {
   description: string;
 }
 
-export default function PageHeader({ title, description }: PageHeaderProps) {
+export default function PageHeader({ title, description }: Readonly<PageHeaderProps>) {
   return (
     <>
       <div className="flex flex-col mt-5 items-start gap-4 md:flex-row md:justify-between md:gap-8">

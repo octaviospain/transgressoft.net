@@ -18,8 +18,8 @@ export default function CustomTooltip({
   children,
   text,
   icon,
-}: CustomTooltipProps) {
-  const IconComponent = icon ? icon : Icons.infoMark;
+}: Readonly<CustomTooltipProps>) {
+  const IconComponent = icon ?? Icons.InfoMark;
   return (
     <TooltipProvider>
       <Tooltip>

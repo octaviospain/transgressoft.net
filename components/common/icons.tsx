@@ -31,17 +31,17 @@ import {
   User,
   X,
   Zap,
-} from "lucide-react";
-import { AiFillStar } from "react-icons/ai";
-import { BiLaugh, BiSolidUser } from "react-icons/bi";
-import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs";
+} from "lucide-react"
+import { AiFillStar } from "react-icons/ai"
+import { BiLaugh, BiSolidUser } from "react-icons/bi"
+import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs"
 import {
   HiBriefcase,
   HiOutlineExternalLink,
   HiOutlineLink,
-} from "react-icons/hi";
-import { IoIosGitBranch } from "react-icons/io";
-import { FaAws, FaLinkedinIn } from "react-icons/fa6";
+} from "react-icons/hi"
+import { IoIosGitBranch } from "react-icons/io"
+import { FaAws, FaLinkedinIn } from "react-icons/fa6"
 import {
   SiApachemaven,
   SiApachekafka,
@@ -61,71 +61,70 @@ import {
   SiSpring,
   SiTypescript,
   SiX,
-} from "react-icons/si";
+} from "react-icons/si"
 
 export const Icons = {
-  contact: Phone,
-  gitRepoIcon: BookMarked,
-  gitOrgBuilding: Building,
-  gitBranch: IoIosGitBranch,
-  close: X,
-  spinner: Loader2,
-  chevronLeft: ChevronLeft,
-  chevronRight: ChevronRight,
-  trash: Trash,
-  post: FileText,
-  page: File,
-  media: Image,
-  settings: Settings,
-  billing: CreditCard,
-  ellipsis: MoreVertical,
-  add: Plus,
-  warning: AlertTriangle,
-  user: User,
-  arrowRight: ArrowRight,
-  help: HelpCircle,
-  pizza: Pizza,
-  sun: SunMedium,
-  moon: Moon,
-  laptop: Laptop,
-  menu: Menu,
-  chevronDown: ChevronDown,
-  laughEmoji: BiLaugh,
-  check: Check,
-  infoMark: BsInfoCircle,
-  questionMark: BsQuestionCircle,
-  link: HiOutlineLink,
-  externalLink: HiOutlineExternalLink,
-  star: AiFillStar,
-  amazonaws: FaAws,
-  apachemaven: SiApachemaven,
-  apachekafka: SiApachekafka,
-  camunda: SiCamunda,
-  docker: SiDocker,
-  gradle: SiGradle,
-  graphql: SiGraphql,
-  hibernate: SiHibernate,
-  java: SiOpenjdk,
-  javascript: SiJavascript,
-  kotlin: SiKotlin,
-  mysql: SiMysql,
-  nodejs: SiNodedotjs,
-  rabbitmq: SiRabbitmq,
-  react: SiReact,
-  spring: SiSpring,
-  typescript: SiTypescript,
-  gmail: SiGmail,
-  twitter: SiX,
-  linkedin: FaLinkedinIn,
-  userFill: BiSolidUser,
-  work: HiBriefcase,
-  gitHub: ({ ...props }: LucideProps) => (
+  Contact: Phone,
+  GitRepoIcon: BookMarked,
+  GitOrgBuilding: Building,
+  GitBranch: IoIosGitBranch,
+  Close: X,
+  Spinner: Loader2,
+  ChevronLeft,
+  ChevronRight,
+  Trash,
+  Post: FileText,
+  Page: File,
+  Media: Image,
+  Settings,
+  Billing: CreditCard,
+  Ellipsis: MoreVertical,
+  Add: Plus,
+  Warning: AlertTriangle,
+  User,
+  ArrowRight,
+  Help: HelpCircle,
+  Pizza,
+  Sun: SunMedium,
+  Moon,
+  Laptop,
+  Menu,
+  ChevronDown,
+  LaughEmoji: BiLaugh,
+  Check,
+  InfoMark: BsInfoCircle,
+  QuestionMark: BsQuestionCircle,
+  Link: HiOutlineLink,
+  ExternalLink: HiOutlineExternalLink,
+  Star: AiFillStar,
+  Amazonaws: FaAws,
+  Apachemaven: SiApachemaven,
+  Apachekafka: SiApachekafka,
+  Camunda: SiCamunda,
+  Docker: SiDocker,
+  Gradle: SiGradle,
+  Graphql: SiGraphql,
+  Hibernate: SiHibernate,
+  Java: SiOpenjdk,
+  Javascript: SiJavascript,
+  Kotlin: SiKotlin,
+  Mysql: SiMysql,
+  Nodejs: SiNodedotjs,
+  Rabbitmq: SiRabbitmq,
+  React: SiReact,
+  Spring: SiSpring,
+  Typescript: SiTypescript,
+  Gmail: SiGmail,
+  Twitter: SiX,
+  Linkedin: FaLinkedinIn,
+  UserFill: BiSolidUser,
+  Work: HiBriefcase,
+  GitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
       focusable="false"
       data-prefix="fab"
       data-icon="github"
-      role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
       {...props}
@@ -136,7 +135,7 @@ export const Icons = {
       ></path>
     </svg>
   ),
-  successAnimated: ({ ...props }: LucideProps) => (
+  SuccessAnimated: ({ ...props }: LucideProps) => (
     <div className="svg-container">
       <svg
         className="ft-green-tick"
@@ -152,18 +151,18 @@ export const Icons = {
           className="tick"
           fill="none"
           stroke="currentColor"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-miterlimit="10"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
           d="M14 27l5.917 4.917L34 17"
         />
       </svg>
     </div>
   ),
-  retro: Palette,
-  cyberpunk: Zap,
-  paper: Scroll,
-  aurora: Sparkles,
-  synthwave: Music,
-};
+  Retro: Palette,
+  Cyberpunk: Zap,
+  Paper: Scroll,
+  Aurora: Sparkles,
+  Synthwave: Music,
+}

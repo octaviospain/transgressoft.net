@@ -4,11 +4,11 @@ interface ChipContainerProps {
   textArr: string[];
 }
 
-export default function ChipContainer({ textArr }: ChipContainerProps) {
+export default function ChipContainer({ textArr }: Readonly<ChipContainerProps>) {
   return (
     <div className="flex my-3 gap-2 flex-wrap">
-      {textArr.map((it, ind) => (
-        <Chip key={ind} content={it} />
+      {textArr.map((it) => (
+        <Chip key={it} content={it} />
       ))}
     </div>
   );

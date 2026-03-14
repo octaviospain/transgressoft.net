@@ -37,7 +37,7 @@ const navItemVariants = {
   }),
 };
 
-export function MainNav({ items, children }: MainNavProps) {
+export function MainNav({ items, children }: Readonly<MainNavProps>) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
@@ -63,7 +63,7 @@ export function MainNav({ items, children }: MainNavProps) {
         <nav className="hidden gap-6 md:flex items-center">
           {items?.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.href}
               custom={index}
               initial="hidden"
               animate="visible"
@@ -93,7 +93,7 @@ export function MainNav({ items, children }: MainNavProps) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.menu />}
+        {showMobileMenu ? <Icons.Close /> : <Icons.Menu />}
         <span className="font-bold">Menu</span>
       </motion.button>
       {showMobileMenu && items && (
