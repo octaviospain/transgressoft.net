@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "i.gr-assets.com" },
+      { protocol: "https", hostname: "images-na.ssl-images-amazon.com" },
+    ],
+  },
   async headers() {
     return [
       {

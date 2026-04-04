@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
+import { BookWidgetLoader } from "@/components/common/book-widget-loader";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
 
@@ -112,6 +113,9 @@ export default function IndexPage() {
               </Link>
             </AnimatedText>
           </div>
+          <AnimatedText delay={1} className="mt-8">
+            <BookWidgetLoader />
+          </AnimatedText>
           <AnimatedText delay={1.2}>
             <Icons.ChevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
