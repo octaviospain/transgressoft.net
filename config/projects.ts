@@ -34,7 +34,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Desktop", "Backend"],
     shortDescription:
-      "Java 8 desktop music manager application using JavaFX and CSS, with REST client, dependency injection, and comprehensive testing.",
+      "Java 25 desktop music manager application using JavaFX and CSS, with dependency injection, and comprehensive testing.",
     githubLink: "https://github.com/octaviospain/musicott",
     techStack: ["Java", "JavaFX", "Spring Boot", "Software Testing"],
     startDate: new Date("2015-01-01"),
@@ -50,15 +50,16 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "Musicott is a Java 8 desktop application for managing music libraries, built with JavaFX and CSS for a rich user interface experience.",
-        "The project features unit testing with JUnit 5 and UI testing with TestFX, a REST web client with JAX-RS, and dependency injection with Google Guice and Spring Boot. Currently under redesign using music-commons and lirp libraries as part of a modular architectural split.",
+        "A cross-platform desktop music player built with JavaFX and Spring Boot, on top of music-commons and lirp. Manage your local music library, organize playlists, play tracks with waveform visualization, and import from iTunes.",
+        "I started this project in my university years as a small pet project to solve a problem with audio metadata tagging, in the times when I started to DJ. Back then I used iTunes to organize my music library and when I started to use DJ software and import my files there, it turned out that iTunes was not writing the track information I spent so much time curating into the file metadata tags, therefore having a frustrated experience since I spent so much time tagging my entire music library in order to find the tracks I wanted to play in my sets with ease.",
+        "Therefore I started a cli tool that parsed the itunes library xml file and wrote the info into the track metadata using jaudiotagger. Easy-peasy. However, why stop there? I was studying to become a software engineer so, why not build my own music library app?",
+        "That became Musicott, the project I spent countless hours learning to code alongside my studies with the ambition to have some features that I did not find in other similar apps while helping me become a better Software Engineer.",
       ],
       bullets: [
-        "Built a desktop music manager application using Java 8 and JavaFX with CSS styling.",
+        "Built a desktop music manager application using Java 25, Kotlin and JavaFX with CSS styling.",
         "Implemented unit testing with JUnit 5 and UI testing with TestFX for comprehensive test coverage.",
-        "Developed REST web client integration using JAX-RS.",
-        "Used dependency injection with Google Guice and Spring Boot for clean architecture.",
-        "Currently redesigning with music-commons and lirp for modular architecture.",
+        "Spring Boot for clean architecture.",
+        "Built on top of music-commons and lirp for modular architecture.",
       ],
     },
   },
@@ -70,7 +71,13 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "A modular, reactive Kotlin library for managing audio libraries, playlists, and waveform visualizations.",
     githubLink: "https://github.com/octaviospain/music-commons",
-    techStack: ["Kotlin", "Concurrent Programming", "Software Testing", "Kotlin Coroutines", "Kotlin Serialization"],
+    techStack: [
+      "Kotlin",
+      "Concurrent Programming",
+      "Software Testing",
+      "Kotlin Coroutines",
+      "Kotlin Serialization",
+    ],
     startDate: new Date("2020-01-01"),
     endDate: new Date("2025-12-01"),
     companyLogoImg: "/projects/music-commons/logo.png",
@@ -107,7 +114,7 @@ export const Projects: ProjectInterface[] = [
       "Kotlin",
       "Kotlin Coroutines",
       "Kotlin Serialization",
-      "Kotest"
+      "Kotest",
     ],
     startDate: new Date("2020-01-01"),
     endDate: new Date("2025-12-01"),
