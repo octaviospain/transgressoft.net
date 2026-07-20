@@ -1,0 +1,50 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":semanticCommitsDisabled"
+  ],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 9am on monday"],
+  "labels": ["dependencies"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 10,
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["dependencies", "security"],
+    "schedule": ["at any time"],
+    "prCreation": "immediate"
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 9am on the first day of the month"]
+  },
+  "packageRules": [
+    {
+      "description": "Group and automerge tooling/build-time dev dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "dev dependencies",
+      "automerge": true
+    },
+    {
+      "description": "Group all @types/* packages into one PR",
+      "matchPackageNames": ["@types/**"],
+      "groupName": "type definitions"
+    },
+    {
+      "description": "Automerge low-risk Docker base-image digest pins",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
+    },
+    {
+      "description": "Stay on the standardized Node.js 22 base image; opt in to majors manually",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}
