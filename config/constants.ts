@@ -44,4 +44,5 @@ export type ValidPages =
   | "projects"
   | "experience"
   | "contact"
+  | "contributions"
   | "resume";

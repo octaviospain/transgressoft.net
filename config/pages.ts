@@ -62,4 +62,13 @@ export const pagesConfig: PagesConfig = {
         "Octavio Calleya's professional journey and experience timeline.",
     },
   },
+  contributions: {
+    title: "Contributions",
+    description: "Open-source contributions and community involvement.",
+    metadata: {
+      title: "Contributions",
+      description:
+        "Octavio Calleya's open-source contributions and community involvement.",
+    },
+  },
 };

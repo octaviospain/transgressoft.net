@@ -4,4 +4,4 @@ Portfolio and personal website for Octavio Calleya Garcia - Transgressoft, built
 
 ## Credits
 
-Based on the [minimal-portfolio](https://github.com/naman-barkiya/minimal-portfolio) template by [Naman Barkiya](https://github.com/naman-barkiya), licensed under MIT.
+Based on the [minimal-portfolio](https://github.com/namanbarkiya/minimal-portfolio) template by [Naman Barkiya](https://github.com/namanbarkiya), licensed under MIT.
