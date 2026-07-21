@@ -16,6 +16,30 @@ export interface ExperienceInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
+    id: "auto-fleet-control",
+    position: "Software Engineer, Java Backend Engineer",
+    company: "Auto Fleet Control",
+    location: "Prague (remote)",
+    startDate: new Date("2025-11-01"),
+    endDate: new Date("2026-07-01"),
+    description: [
+      "Design, implementation and testing of a greenfield, modular Self-Contained System using Domain Driven Design, Hibernate, Spring Boot 4 and Kafka.",
+      "Maintenance and support of production legacy Java 11 systems across Oracle and PostgreSQL databases.",
+    ],
+    achievements: [
+      "Designed and built a greenfield, modular Self-Contained System applying Domain Driven Design with Hibernate, Spring Boot 4 and Kafka.",
+      "Maintained and supported production legacy Java 11 systems across Oracle and PostgreSQL databases.",
+    ],
+    skills: [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "Apache Kafka",
+      "Domain Driven Design",
+      "Software Architecture",
+    ],
+  },
+  {
     id: "cisco",
     position: "Software Engineer, Java Backend Engineer",
     company: "Cisco Systems",
