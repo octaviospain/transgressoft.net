@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trade_Winds } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
@@ -16,10 +16,10 @@ interface MainNavProps {
   children?: React.ReactNode;
 }
 
-const tradeWinds = Trade_Winds({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
+const tradeWinds = localFont({
+  src: "../../assets/fonts/TradeWinds-Regular.woff2",
+  weight: "400",
+  style: "normal",
   display: "swap",
 });
 
