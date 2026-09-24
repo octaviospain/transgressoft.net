@@ -1,11 +1,11 @@
 # --- Stage 1: Install dependencies ---
-FROM node:22-alpine AS deps
+FROM node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402 AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --only=production
 
 # --- Stage 2: Build the application ---
-FROM node:22-alpine AS builder
+FROM node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402 AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
@@ -17,7 +17,7 @@ ARG NEXT_PUBLIC_RESUME_LINK
 RUN npm run build
 
 # --- Stage 3: Production runner ---
-FROM node:22-alpine AS runner
+FROM node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402 AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
